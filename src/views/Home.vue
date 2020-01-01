@@ -1,20 +1,28 @@
 <template>
   <div class="dr-home">
-    <v-container>
+    <v-container style="height: 100%">
       <main-appbar></main-appbar>
       <section id="greetings">
-        <h1
-          class="font-weight-thin text-uppercase dr-text-greetings"
+        <v-row
+          style="height: 60vh"
+          align-content="center"
         >
-          Welcome <br> to My <br> Personal Website
-          <font-awesome-icon class="amber--text" :icon="['fa', 'smile']"></font-awesome-icon>
-        </h1>
-        <p class="font-weight-light font-italic">"This website is still under construction"</p>
+          <v-col xs="12" md="6">
+            <h1
+              class="font-weight-thin text-uppercase dr-text-greetings"
+            >
+              Welcome to <br> My Personal Website
+              <font-awesome-icon class="amber--text" :icon="['fa', 'smile']"></font-awesome-icon>
+            </h1>
+            <p class="font-weight-light font-italic">"This website is still under construction"</p>
+          </v-col>
+        </v-row>
       </section>
       <section id="socials">
         <v-row
-          align-content="center"
+          align-content="end"
           justify="center"
+          style="height: 25vh"
         >
           <v-col
             v-for="(social, index) in socials"
@@ -82,11 +90,11 @@ export default {
   height: 100%;
   width: 100%;
   .dr-text-greetings {
-    font-size: 2.5rem; // 4 nice in 1080, 3 rem too small in 1080
+    font-size: 1.8rem; // 3.5 nice in 1080, 2 or 1.8 in phone
   }
   background-color: #E8E8E8;
   .dr-icon {
-    font-size: 1.5rem; // 1.5 nice in phone, 2 nice in laptop
+    font-size: 1.5rem;
   }
 }
 </style>

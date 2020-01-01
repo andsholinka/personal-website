@@ -49,9 +49,9 @@ export default {
   data() {
     return {
       menus: [
-        { title: 'Projects', route: '#' },
-        { title: 'Blog', route: '#' },
-        { title: 'About', route: '#' },
+        { title: 'Projects', route: '?project' },
+        { title: 'Blog', route: '?blog' },
+        { title: 'About', route: '?about' },
       ],
     };
   },
