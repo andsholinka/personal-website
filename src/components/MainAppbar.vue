@@ -13,7 +13,6 @@
     <v-btn
       v-for="(menu, index) in menus"
       :key="index"
-      target="_blank"
       text
       class="secondary--text hidden-sm-and-down"
       router :to="menu.route"
