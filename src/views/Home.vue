@@ -4,10 +4,11 @@
       <main-appbar></main-appbar>
       <section id="greetings">
         <v-row
-          style="height: 60vh"
-          align-content="center"
+          style="height: 40vh"
+          justify="start"
+          align-content="end"
         >
-          <v-col xs="12" md="6">
+          <v-col xs="12" md="6" class="pb-0">
             <h1
               class="font-weight-thin text-uppercase dr-text-greetings"
             >
@@ -20,14 +21,15 @@
       </section>
       <section id="socials">
         <v-row
-          align-content="end"
-          justify="center"
+          align-content="start"
+          justify="start"
           style="height: 25vh"
         >
           <v-col
             v-for="(social, index) in socials"
             :key="index"
             cols="auto"
+            class="pt-0"
           >
             <v-btn
               text
