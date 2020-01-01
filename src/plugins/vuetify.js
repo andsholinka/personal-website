@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
   faEllipsisV,
   faEnvelope,
+  faHeart,
+  faSmile,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faInstagram,
   faGithub,
   faLinkedin,
+  faVuejs,
 } from '@fortawesome/free-brands-svg-icons';
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
@@ -19,6 +22,9 @@ library.add(
   faGithub,
   faEnvelope,
   faLinkedin,
+  faHeart,
+  faVuejs,
+  faSmile,
 );
 
 Vue.use(Vuetify);
