@@ -93,6 +93,12 @@ export default {
   width: 100%;
   .dr-text-greetings {
     font-size: 1.8rem; // 3.5 nice in 1080, 2 or 1.8 in phone
+    @media only screen and (min-width: 600px) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: 1264px) {
+      font-size: 3.2rem
+    }
   }
   background-color: #E8E8E8;
   .dr-icon {
