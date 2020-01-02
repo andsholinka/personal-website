@@ -92,7 +92,7 @@ export default {
   height: 100%;
   width: 100%;
   .dr-text-greetings {
-    font-size: 1.8rem; // 3.5 nice in 1080, 2 or 1.8 in phone
+    font-size: 1.8rem;
     @media only screen and (min-width: 600px) {
       font-size: 2.5rem;
     }
