@@ -10,12 +10,14 @@
         >
           <v-col xs="12" md="6" class="pb-0">
             <h1
+              id="greetings-heading"
               class="font-weight-thin text-uppercase dr-text-greetings"
             >
-              Welcome to <br> My Personal Website
-              <font-awesome-icon class="amber--text" :icon="['fa', 'smile']"></font-awesome-icon>
             </h1>
-            <p class="font-weight-light font-italic">"This website is still under construction"</p>
+            <!-- <font-awesome-icon class="amber--text" :icon="['fa', 'smile']">
+            </font-awesome-icon> -->
+            <p class="font-weight-light font-italic">"This website is still under construction"
+            </p>
           </v-col>
         </v-row>
       </section>
@@ -49,6 +51,8 @@
 </template>
 
 <script>
+import TypeIt from 'typeit';
+
 import MainAppbar from '@/components/MainAppbar.vue';
 import MainFooter from '@/components/MainFooter.vue';
 
@@ -84,6 +88,27 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.doTypewriting();
+  },
+  methods: {
+    doTypewriting() {
+      const greetings = new TypeIt('#greetings-heading', {
+        speed: 50,
+        startDelay: 900,
+      });
+
+      greetings
+        .type('Welcome to')
+        .pause(300)
+        .type('<br>')
+        .pause(300)
+        .type('My Personal Website')
+        .pause(750)
+        .type(' 😊')
+        .go();
+    },
+  },
 };
 </script>
 
@@ -94,10 +119,10 @@ export default {
   .dr-text-greetings {
     font-size: 1.8rem;
     @media only screen and (min-width: 600px) {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
     @media only screen and (min-width: 1264px) {
-      font-size: 3.2rem
+      font-size: 3.1rem
     }
   }
   background-color: #E8E8E8;
